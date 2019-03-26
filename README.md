@@ -64,12 +64,12 @@ kubectl get services
  
 # Check the the rings for the database are there (below names will change) 
  
-kubectl exec -it cassandra-lwfvw -- nodetool status
+kubectl exec -it cassandra-45ert -- nodetool status
 
 # create the needed database 
 # log into one of the instances (again id will change)
 
-kubectl exec -it cassandra-24bgm cqlsh
+kubectl exec -it cassandra-67tyu cqlsh
 
 # you will be then into database prompt , run below commands to create the actual DB
 
