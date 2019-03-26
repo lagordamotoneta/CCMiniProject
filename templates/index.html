@@ -1,0 +1,107 @@
+<!--HTML document in order to display the endpopints developed as part of app.py -->
+<!--Also there is a part dedicated tio handle forms used in the code woth Flask Tables -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mini Project</title>
+</head>
+<body>
+  <h1>My Favorite Artists and Albums</h1>
+  <h2>End Points, responses in Json</h2>
+  <h3>Get list of favorite artists with GET method:</h3>
+  /getListFavArtistsJson
+  <br>
+  <h3>Search an Artist and obtain the favorite albums with GET method:</h3>
+  /searchFavArtistJson/"artist here"
+  <br>
+  <h3>Get list favorite albums of an artists with GET method:</h3>
+  /getListFavAlbumsJson/"artist here"
+  <br>
+  <h3>Add new favorite artist with POST method:</h3>
+  /insertArtistJSon/"artist here"
+  <br>
+  <h3>Add new favorite album from an artist with POST method:</h3>
+  /insertArtistAlbumJson/"artist here"/"album here"
+  <br>
+  <h3>Delete a favorite artist record (with its albums) with DELETE method:</h3>
+  /removeFavArtist/"artist here"
+  <br>
+  <h3>Get favorite artist' album art with GET method <font color="red">(Powered by LastFM):</font></h3>
+  /getAlbumArtJson/"artist name here"/"album here"
+  <br>
+  <h3>Get tracks of one of my favorite artist' albums with GET method <font color="red">(Powered by LastFM):</font> </h3>
+  /getAlbumTracksJson/"artist name here"/"album here"
+
+  <h2>Using HTML Forms, responses in Flask tables</h2>
+      <br>
+      <form action="/getListFavArtists" method="GET">
+        <b>My favorite artists?</b>
+        <input type="submit" value='Get them!'>
+      </form>
+      <br>
+      <br>
+      <form action="/getListFavAlbums" method="GET">
+        <b>My favorite albums of an artist?</b>
+        <br>Artist/Band
+        <input type="text" name="artistname">
+        <input type="submit" value='Get Fav Albums!'>
+      </form>
+      <br>
+      <form action="/searchFavArtist" method="GET">
+        <b>Search one of my favorite artists?</b>
+        <br>Artist/Band
+        <input type="text" name="artistname">
+        <input type="submit" value='Search it!'>
+      </form>
+      <br>
+      <br>
+      <form action="/insertArtist" method="POST">
+        <b>I have a new favorite artist!</b>
+        <br>Artist/Band
+        <input type="text" name="artistname">
+        <input type="submit" value='Add it!'>
+      </form>
+      <br>
+      <br>
+      <form action="/insertArtistAlbum" method="POST">
+        <b>I have a new favorite album of an artist/band!</b>
+        <br>Artist
+        <input type="text" name="artistname">
+        <br>Album
+        <input type="text" name="album">
+        <input type="submit" value='Add it!'>
+      </form>
+      <br>
+      <br>
+        <form action="/removeFavArtist" method="DELETE">
+        <b>I Don't like an artist anymore!</b>
+        <br>Artist
+        <input type="text" name="artistname">
+        <input type="submit" value='Delete it!'>
+      </form>
+      <br>
+      <br>
+      <form action="/albumArt" method="GET">
+        <b>How the art of a favorite album looks like??<font color="red">(Powered by LastFM):</font></b>
+        <br>Artist
+        <input type="text" name="artistname">
+        <br>Album
+        <input type="text" name="album">
+        <input type="submit" value='Look at it!'>
+      </form>
+      <br>
+      <br>
+      <form action="/getAlbumTracks" method="GET">
+        <b>Tracks in one of my favorite albums? <font color="red">(Powered by LastFM):</font></b>
+        <br>Artist
+        <input type="text" name="artistname">
+        <br>Album
+        <input type="text" name="album">
+        <input type="submit" value='Get them!'>
+      </form>
+      <br>
+      <br>
+</body>
+</html>
