@@ -31,7 +31,6 @@ The main page of the API is an HTML index page. It is designed to be accessed th
 
 The project uses a Cassandra database that was created. This database stores persistent information of the artist. Artist name and albums. The albums column was created as a collection column that stores a list of albums. The primary key is artist name and also includes an ID column that is populated wit current time through uuid column.
 
-#### CapeAPI
 
 #### Setup of application.
  
