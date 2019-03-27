@@ -27,14 +27,14 @@ The web application is designed for cloud deployment using Docker and Kubernetes
 The main page of the API is an HTML index page. It is designed to be accessed through a brower. Couple of templates in app/templates/ were created for index and Flask tables display purposes. The app is served with Flask's built-in server. For deployment, the app is containerised and exposed on a public IP address at port 80 .
 
 
-#### database
+#### Database description.
 
 The project uses a Cassandra database that was created. This database stores persistent information of the artist such as artist name and albums in one table called artistsAndAlbums at Records schema. The albums column was created as a collection column that stores a list of albums. The primary key is artist name and also includes an ID column that is populated wit current time through uuid column.
 
 
 #### Setup of application.
  
-In order to use this application, below points need to be performed as first step to create Cassandra database cluster. The Kubernetes configuration files are part of the main directory of the application. This application was deployed using Google Cloud.
+In order to use this application, below points need to be performed as first step to create Cassandra database cluster. The Kubernetes configuration files are part of the main directory of the application. This application was deployed using Google Cloud. After database is set up , we shpuld be able to use the application (after downloading the app files)
  
  ```bash
 # Cassandra Cluster commands for set up
