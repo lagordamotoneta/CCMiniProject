@@ -6,7 +6,7 @@ This is a project to apply control over favorite artists of a person and provide
 
 The main web application is defined in app/app.py and can be accessed through an HTML index page that provides a functionality that returns responses as Json files as well as Flask tables by using an API. The  API with provide following methods:
 
-Route | Type | Description
+Path | Method Type | Description
 ---|---|---
 /getListFavArtistsJson | GET | Provides a list of artist that are currently saved as favorite. This information is read from a Cassandra database . Result is in Json format.
 /searchFavArtistJson/{artist} | GET | Provides a search functionality to search for an artist. Name of artist need to be provided as parameter and will return the artist along with the albums that were saved as favourites. Result is in Json format.
