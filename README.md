@@ -1,10 +1,10 @@
 # Favorite Artists control 
 
-This is a project to apply control over favorite artists of a person and provides an ability of getting extra information about an artist such as album art and tracks in a record, this extra information is provided by a connection to LastFM API (https://www.last.fm/api)
+This is a project to apply control over favorite artists of a person and provides an ability of getting extra information about an artist such as album art and tracks in a record, this extra information is provided by a connection to LastFM API (https://www.last.fm/api). Persisten informaton of the artist is stored in a Cassandra database.
 
 ## Overview
 
-The main web application is defined in app/app.py and can be accessed through an HTML index page that provides a functionality that returns responses as son files as well as Flask tables by using an API. The  API with provide following methods:
+The main web application is defined in app/app.py and can be accessed through an HTML index page that provides a functionality that returns responses as Json files as well as Flask tables by using an API. The  API with provide following methods:
 
 Route | Type | Description
 ---|---|---
@@ -29,7 +29,7 @@ The main page of the API is an HTML index page. It is designed to be accessed th
 
 #### database
 
-The project uses a Cassandra database that was created. This database stores persistent information of the artist. Artist name and albums. The albums column was created as a collection column that stores a list of albums. The primary key is artist name and also includes an ID column that is populated wit current time through uuid column.
+The project uses a Cassandra database that was created. This database stores persistent information of the artist such as artist name and albums in one table called artistsAndAlbums at Records schema. The albums column was created as a collection column that stores a list of albums. The primary key is artist name and also includes an ID column that is populated wit current time through uuid column.
 
 
 #### Setup of application.
@@ -61,7 +61,7 @@ kubectl scale rc cassandra --replicas=3
 
 kubectl get services
  
-# Check the the rings for the database are there (below names will change) 
+# Check rings creation for the database (below names will change) 
  
 kubectl exec -it cassandra-45ert -- nodetool status
 
