@@ -1,6 +1,6 @@
 # Favorite Artists control 
 
-This is a project to apply control over favorite artists of a person and provides an ability of getting extra information about an artist such as album art and tracks in a record, this extra information is provided by a connection to LastFM API (https://www.last.fm/api). Persistent informaton of the artist is stored in a Cassandra database.
+This is a project to apply control over favorite artists of a person and provides an ability of getting extra information about an artist such as album art and tracks in a record, this extra information is provided by a connection to LastFM API (https://www.last.fm/api). Persistent information of the artist is stored in a Cassandra database.
 
 ## Overview
 
